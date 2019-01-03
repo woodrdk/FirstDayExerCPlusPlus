@@ -33,8 +33,11 @@ int main() {
 
 	cout << "Finally, enter the seconds of arc: ";
 	cin >> seconds;
-
-	cout << degrees << " degrees," << minutes << " minutes, " << seconds << " seconds = " << "degrees" << endl;
+	double decimalLat = 0;
+	decimalLat = (seconds / 60.0);
+	decimalLat = (decimalLat + minutes) / 60.0;
+	decimalLat = decimalLat + degrees;
+	cout << degrees << " degrees," << minutes << " minutes, " << seconds << " seconds = " << decimalLat << " degrees" << endl;
 
 
 
